@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools                 = "http://schemas.android.com/tools"
+    android:layout_width        = "match_parent"
+    android:layout_height       = "match_parent"
+    android:orientation         = "vertical"
+    android:background          = "@color/colorPrimary"
+    tools:context               = ".MainActivity">
+    
+    <TextView
+        android:layout_width   = "wrap_content"
+        android:layout_height  = "wrap_content"
+        android:layout_gravity = "center"
+        android:fontFamily     = "cursive"
+        android:text           = "Welcome to MyBmi"
+        android:textColor      = "#110d17"
+        android:textSize       = "26sp" />
+
+    <TextView
+        android:layout_width       = "wrap_content"
+        android:layout_height      = "wrap_content"
+        android:text               = "Weight [kg]"
+        android:textColor          = "#110"
+        android:textSize           = "18sp"/>
+
+    <AutoCompleteTextView
+        android:id             = "@+id/txt_weight"
+        android:layout_width   = "wrap_content"
+        android:layout_height  = "wrap_content"
+        android:digits         = "0123456789."
+        android:ems            = "10"
+        android:hint           = "your weight (75) kg"
+        android:textColor      = "#110"
+        android:inputType      = "numberDecimal"
+        android:maxLines       = "1"
+        android:singleLine     = "true"
+        tools:ignore           = "LabelFor" />
+
+    <TextView
+        android:layout_width   = "wrap_content"
+        android:layout_height  = "wrap_content"
+        android:text           = "Height [m]"
+        android:textColor      = "#110"
+        android:textSize       = "18sp"/>
+
+    <AutoCompleteTextView
+        android:id             = "@+id/txt_height"
+        android:layout_width   = "wrap_content"
+        android:layout_height  = "wrap_content"
+        android:digits         = "0123456789."
+        android:ems            = "10"
+        android:hint           = "your height (1.80) m"
+        android:inputType      = "numberDecimal"
+        android:maxLines       = "1"
+        android:singleLine     = "true" />
+
+    <Button
+        android:id               = "@+id/btn_calc_bmi"
+        android:layout_width     = "wrap_content"
+        android:layout_height    = "40dp"
+        android:layout_gravity   = "center"
+        android:layout_marginTop = "5dp"
+        android:background       = "@drawable/buttonshape"
+        android:shadowColor      = "#A8A8A1"
+        android:shadowDx         = "0"
+        android:shadowDy         = "0"
+        android:shadowRadius     = "20"
+        android:text             = "Calculate"
+        android:textColor        = "#F5EEC4" />
+
+    <TextView
+        android:layout_width     = "wrap_content"
+        android:layout_height    = "wrap_content"
+        android:text             = "Your BMI: "
+        android:textColor        = "#110"
+        android:textSize         = "18sp"/>
+
+    <AutoCompleteTextView
+        android:id                = "@+id/txt_bmi_result"
+        android:layout_width      = "wrap_content"
+        android:layout_height     = "wrap_content"
+        android:digits            = "0123456789."
+        android:elegantTextHeight = "false"
+        android:ems               = "10"
+        android:enabled           = "false"
+        android:freezesText       = "true"
+        android:inputType         = "numberDecimal"
+        android:maxLines          = "1"
+        android:singleLine        = "true"
+        tools:ignore              = "LabelFor" />
+
+    <TextView
+        android:layout_width      = "wrap_content"
+        android:layout_height     = "wrap_content"
+        android:text              = "BMI rate: "
+        android:textColor         = "#110"
+        android:textSize          = "18sp" />
+
+    <AutoCompleteTextView
+        android:id                = "@+id/txt_bmi_rate"
+        android:layout_width      = "wrap_content"
+        android:layout_height     = "wrap_content"
+        android:ems               = "10"
+        android:enabled           = "false"
+        android:maxLines          = "1"
+        android:singleLine        = "true" />
+
+</LinearLayout>
