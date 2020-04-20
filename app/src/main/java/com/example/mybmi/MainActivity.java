@@ -69,6 +69,35 @@ public class MainActivity<decimal> extends AppCompatActivity implements View.OnC
                 return bOk;
             }
         }
+        if((strHeight.equals(".") || strWeight.equals(".")))
+        {
+            try {
+                throw new Exception("נא למלא קלט תקין, רק תו נקודה לא קלט תקין");
+            } catch (Exception e) {
+                Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+                return bOk;
+            }
+        }
+        int nCountDot = strHeight.length() - strHeight.replace(".", "").length();
+        if(nCountDot > 1)
+        {
+            try {
+                throw new Exception("נא למלא קלט תקין, לא יכול להיות יותר מנקודה 1 בשדה גובה");
+            } catch (Exception e) {
+                Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+                return bOk;
+            }
+        }
+        nCountDot = strHeight.length() - strWeight.replace(".", "").length();
+        if(nCountDot > 1)
+        {
+            try {
+                throw new Exception("נא למלא קלט תקין, לא יכול להיות יותר מנקודה 1 בשדה משקל");
+            } catch (Exception e) {
+                Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+                return bOk;
+            }
+        }
         double dHeight = Double.parseDouble(strHeight);
         double dWeight = Double.parseDouble(strWeight);
         if (dHeight < 1)
@@ -82,7 +111,8 @@ public class MainActivity<decimal> extends AppCompatActivity implements View.OnC
                 Toast.makeText(this,e.getMessage(),Toast.LENGTH_LONG).show();
                 return bOk;
             }
-        } if (dWeight < 1)
+        }
+        if (dWeight < 1)
         {
             try
             {
