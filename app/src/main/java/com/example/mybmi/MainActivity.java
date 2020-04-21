@@ -88,7 +88,7 @@ public class MainActivity<decimal> extends AppCompatActivity implements View.OnC
                 return bOk;
             }
         }
-        nCountDot = strHeight.length() - strWeight.replace(".", "").length();
+        nCountDot = strWeight.length() - strWeight.replace(".", "").length();
         if(nCountDot > 1)
         {
             try {
